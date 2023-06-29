@@ -13,8 +13,7 @@ public class Enemy : MonoBehaviour
     public float hearRadiusWalk;
     public Transform centerPoint;
     public float range;
-    public bool IsPlaying = false;
-    float hearDistance;
+    private float hearDistance;
 
     private void Start()
     {
@@ -34,11 +33,15 @@ public class Enemy : MonoBehaviour
             }
         }
 
-        float hearDistance = Vector3.Distance(transform.position, target.transform.position);
+
+        //Find a way to simplfy this and also, figure out how to insert a code that will play a chase music without it reapeating everytime the enemy keeps finding the player
+        //You can use a boolean to detect whether or not the player is heard and will only play the music once and then goes back off once the distance from the player is far enough
+
         if (target.GetComponent<FirstPersonController>().CurrentInput.x > 0.1f && hearDistance < hearRadiusWalk || target.GetComponent<FirstPersonController>().CurrentInput.x < -0.1f && hearDistance < hearRadiusWalk)
         {
+            //the sequence for the if statement could be turned into a coroutine if you want, or a function by itself like private void playerHeard()
             navMeshAgent.SetDestination(target.position);
-            Debug.Log("I CAN HEAR YOU WALKING");          
+            Debug.Log("I CAN HEAR YOU WALKING");      
         }
         else if (target.GetComponent<FirstPersonController>().CurrentInput.x > 3.5f && hearDistance < hearRadiusRun || target.GetComponent<FirstPersonController>().CurrentInput.x < -3.5f && hearDistance < hearRadiusWalk)
         {
@@ -64,7 +67,6 @@ public class Enemy : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        float hearDistance = Vector3.Distance(transform.position, target.transform.position);
         if (other.gameObject.CompareTag("Player") && hearDistance < hearRadius)
         {
             Debug.Log("I CAUGHT YOU");
@@ -84,4 +86,14 @@ public class Enemy : MonoBehaviour
         result = Vector3.zero;
         return false;
     }
+
+    /*
+     * Would be great to use this instead of repeating the same code for the if statements
+     * Figure out how to make the enemy speed up using navmesh.speed = 5 or 6 whenever the enemy detects the player and then go back to 3 when they are no longer detected
+     * 
+    private void playerHeard()
+    {
+        navMeshAgent.SetDestination(target.position);
+    }
+    */
 }
