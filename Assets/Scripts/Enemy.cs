@@ -17,8 +17,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        navMeshAgent = gameObject.GetComponent<NavMeshAgent>();
-        hearDistance = Vector3.Distance(transform.position, target.transform.position);
+        navMeshAgent = gameObject.GetComponent<NavMeshAgent>();     
     }
     private void Update()
     {  
@@ -36,7 +35,7 @@ public class Enemy : MonoBehaviour
 
         //Find a way to simplfy this and also, figure out how to insert a code that will play a chase music without it reapeating everytime the enemy keeps finding the player
         //You can use a boolean to detect whether or not the player is heard and will only play the music once and then goes back off once the distance from the player is far enough
-
+        hearDistance = Vector3.Distance(transform.position, target.transform.position);
         if (target.GetComponent<FirstPersonController>().CurrentInput.x > 0.1f && hearDistance < hearRadiusWalk || target.GetComponent<FirstPersonController>().CurrentInput.x < -0.1f && hearDistance < hearRadiusWalk)
         {
             //the sequence for the if statement could be turned into a coroutine if you want, or a function by itself like private void playerHeard()
