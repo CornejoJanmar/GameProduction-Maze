@@ -197,7 +197,7 @@ public class FirstPersonController : MonoBehaviour
             if (durationTimer > duration)
             {
                 float regenTempAlpha = damageScreen.color.a;
-                regenTempAlpha -= Mathf.Clamp(Time.deltaTime * fadeSpeed, 0, 0.5f);
+                regenTempAlpha -= Mathf.Clamp(Time.deltaTime * fadeSpeed, 0, 0.2f);
                 damageScreen.color = new Color(damageScreen.color.r, damageScreen.color.g, damageScreen.color.b, regenTempAlpha);
             }
         }
