@@ -86778,21 +86778,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 537062416}
     - target: {fileID: 449813500689475150, guid: c2669f387f5ccbd438b4faeb2d61e941, type: 3}
-      propertyPath: myLight
-      value: 
-      objectReference: {fileID: 1386456211}
-    - target: {fileID: 449813500689475150, guid: c2669f387f5ccbd438b4faeb2d61e941, type: 3}
       propertyPath: centerPoint
       value: 
       objectReference: {fileID: 769690967}
-    - target: {fileID: 449813500689475150, guid: c2669f387f5ccbd438b4faeb2d61e941, type: 3}
-      propertyPath: maxIntensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 449813500689475150, guid: c2669f387f5ccbd438b4faeb2d61e941, type: 3}
-      propertyPath: totalSeconds
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 449813500689475158, guid: c2669f387f5ccbd438b4faeb2d61e941, type: 3}
       propertyPath: m_Name
       value: Monster
