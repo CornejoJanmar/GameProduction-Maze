@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canSprint: 1
-  canJump: 0
+  canJump: 1
   canCrouch: 0
   canHeadBob: 1
   canInteract: 1
@@ -377,7 +377,7 @@ MonoBehaviour:
   jumpKey: 32
   crouchKey: 99
   interactKey: 323
-  holdBreath: 32
+  holdBreath: 113
   WalkSpeed: 3
   SprintSpeed: 6
   crouchSpeed: 0.25
@@ -407,7 +407,7 @@ MonoBehaviour:
   walkBobSpeed: 14
   walkBobAmount: 0.05
   SprintBobSpeed: 18
-  SprintBobAmount: 0.11
+  SprintBobAmount: 0.15
   crouchBobSpeed: 7
   crouchBobAmount: 0.02
   baseStepSpeed: 0.7
