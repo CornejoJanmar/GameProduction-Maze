@@ -410,8 +410,8 @@ MonoBehaviour:
   crouchBobSpeed: 7
   crouchBobAmount: 0.02
   baseStepSpeed: 0.7
-  crouchStepMultiplier: 1.5
-  SprintStepMultiplier: 0.5
+  crouchStepMultiplier: 1
+  SprintStepMultiplier: 0.8
   footstepAudioSource: {fileID: 9092103105248917889}
   woodClips:
   - {fileID: 8300000, guid: 03c1b40fbdb6db349936f78cc38c3a9f, type: 3}
