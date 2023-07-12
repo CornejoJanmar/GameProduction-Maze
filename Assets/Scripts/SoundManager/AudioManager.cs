@@ -2,7 +2,7 @@ using UnityEngine.Audio;
 using System;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : MonoBehaviour //New Sound Manager
 {
     public Sounds[] sounds; //Basically All of the Audio Files listed in this project
 

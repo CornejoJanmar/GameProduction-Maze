@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Sounds
+public class Sounds //This is newer part of Sound Manager
 {
     public string name;
     public AudioClip clip;
