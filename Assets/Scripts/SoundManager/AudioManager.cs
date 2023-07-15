@@ -53,6 +53,13 @@ public class AudioManager : MonoBehaviour //New Sound Manager
         s.source.Play();
     }
 
+    public void Stop(String name)
+    {
+        Sounds s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+            return;
+        s.source.mute = !s.source.mute;
+    }
     //to play sound file in any script, just use like
     // Audiomanager Audio;
     // Audio.Play("FootstepWood01");
