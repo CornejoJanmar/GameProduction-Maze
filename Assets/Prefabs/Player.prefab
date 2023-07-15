@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canSprint: 1
-  canJump: 1
+  canJump: 0
   canCrouch: 0
   canHeadBob: 1
   canInteract: 1
@@ -376,7 +376,7 @@ MonoBehaviour:
   jumpKey: 32
   crouchKey: 99
   interactKey: 323
-  holdBreath: 113
+  holdBreath: 32
   WalkSpeed: 3
   SprintSpeed: 6
   crouchSpeed: 0.25
@@ -396,7 +396,7 @@ MonoBehaviour:
   timeBeforeStart: 5
   staminaRegenValue: 5
   staminaRegenTime: 0.5
-  currentStamina: 0
+  currentStamina: 100
   maxOxygen: 35
   oxygenDrain: 5
   timeBeforeOxygenStart: 2
@@ -409,9 +409,9 @@ MonoBehaviour:
   SprintBobAmount: 0.15
   crouchBobSpeed: 7
   crouchBobAmount: 0.02
-  baseStepSpeed: 0.7
+  baseStepSpeed: 1
   crouchStepMultiplier: 1
-  SprintStepMultiplier: 0.8
+  SprintStepMultiplier: 1
   footstepAudioSource: {fileID: 9092103105248917889}
   woodClips:
   - {fileID: 8300000, guid: 03c1b40fbdb6db349936f78cc38c3a9f, type: 3}
