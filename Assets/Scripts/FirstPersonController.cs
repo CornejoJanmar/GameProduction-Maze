@@ -190,7 +190,7 @@ public class FirstPersonController : MonoBehaviour
         }
 
 
-
+        /*
         if (damageScreen.color.a > 0)
         {
             durationTimer += Time.deltaTime;
@@ -201,7 +201,7 @@ public class FirstPersonController : MonoBehaviour
                 damageScreen.color = new Color(damageScreen.color.r, damageScreen.color.g, damageScreen.color.b, regenTempAlpha);
             }
         }
-
+        */
 
     }
 
