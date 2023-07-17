@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 9092103104889873753}
   - component: {fileID: 9092103104889873732}
   - component: {fileID: 9092103104889873758}
+  - component: {fileID: 5760178997585303277}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -433,6 +434,19 @@ MonoBehaviour:
     m_Bits: 0
   enemy: {fileID: 0}
   CurrentInput: {x: 0, y: 0}
+--- !u!114 &5760178997585303277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9092103104889873759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3294c00b19d55a941b6eace425fd54e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TerminalCounted: 0
 --- !u!1 &9092103105248917894
 GameObject:
   m_ObjectHideFlags: 0

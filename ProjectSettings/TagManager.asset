@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Footstep/WOOD
   - Cube
+  - Terminal
   layers:
   - Default
   - TransparentFX
