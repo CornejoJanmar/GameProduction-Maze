@@ -190,7 +190,7 @@ public class FirstPersonController : MonoBehaviour
         }
 
 
-        /*
+        
         if (damageScreen.color.a > 0)
         {
             durationTimer += Time.deltaTime;
@@ -201,7 +201,7 @@ public class FirstPersonController : MonoBehaviour
                 damageScreen.color = new Color(damageScreen.color.r, damageScreen.color.g, damageScreen.color.b, regenTempAlpha);
             }
         }
-        */
+
 
     }
 
@@ -305,14 +305,19 @@ public class FirstPersonController : MonoBehaviour
 
     private void HandleOxygen()
     {
-        if (IsBreathing && currentOxygen != 0)
+
+        if (Input.GetKeyDown(holdBreath))
         {
+            FindObjectOfType<SoundManager>().Play("BreathIn");
+        }
+
+        if (IsBreathing && currentOxygen != 0)
+        {          
             if (regeneratingOxygen != null)
-            {
+            {                
                 StopCoroutine(regeneratingOxygen);
                 regeneratingOxygen = null;
             }
-
 
             currentOxygen -= oxygenDrain * Time.deltaTime;
 
@@ -332,7 +337,8 @@ public class FirstPersonController : MonoBehaviour
                 canBreath = false;
         }
         if (!IsBreathing && currentOxygen < maxOxygen && regeneratingOxygen == null)
-        {
+        {   
+            FindObjectOfType<SoundManager>().Play("BreathOut");
             regeneratingOxygen = StartCoroutine(RegenOxygen());
         }
     }
