@@ -1784,6 +1784,10 @@ PrefabInstance:
       propertyPath: centerPoint
       value: 
       objectReference: {fileID: 1990177178}
+    - target: {fileID: 449813500689475156, guid: c2669f387f5ccbd438b4faeb2d61e941, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 449813500689475158, guid: c2669f387f5ccbd438b4faeb2d61e941, type: 3}
       propertyPath: m_Name
       value: Monster
