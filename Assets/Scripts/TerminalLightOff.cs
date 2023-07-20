@@ -22,4 +22,19 @@ public class TerminalLightOff : MonoBehaviour
             SurfaceLight.SetActive(false);
         }
     }
+
+    
+    //For Terminal Interaction
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (Input.GetKeyDown(KeyCode.E)&& isTerminalOn)
+            {
+                Debug.Log("Terminal Shut");
+                GameObject.FindGameObjectWithTag("Player").GetComponent<TerminalPC_Script>().CountTerminalInteracted();
+                TurnOffTerminal();
+            }
+        }
+    }
 }

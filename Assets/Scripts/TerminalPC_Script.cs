@@ -5,6 +5,11 @@ using UnityEngine;
 public class TerminalPC_Script : Interactable
 {
     public int TerminalCounted = 0;
+
+    private void Start()
+    {
+        TerminalCounted = 0;
+    }
     public void CountTerminalInteracted()
     {
         TerminalCounted++;

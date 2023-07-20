@@ -521,18 +521,4 @@ public class FirstPersonController : MonoBehaviour
 
         regeneratingOxygen = null;
     }
-
-    //For Terminal Interaction
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Terminal"))
-        {
-            if (Input.GetKeyDown(KeyCode.E) && other.gameObject.GetComponent<TerminalLightOff>().isTerminalOn)
-            {
-                Debug.Log("Terminal Shut");
-                GameObject.FindObjectOfType<TerminalPC_Script>().CountTerminalInteracted();
-                other.gameObject.GetComponent<TerminalLightOff>().TurnOffTerminal();
-            }
-        }
-    }
 }
