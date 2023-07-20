@@ -17,6 +17,7 @@ public class TerminalPC_Script : Interactable
         if (TerminalCounted == 6) 
         {
             TurnOffAllTerminals();
+            Debug.Log("Exit Unlocked");
         }
     }
 
