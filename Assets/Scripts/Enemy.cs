@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using Unity.AI.Navigation;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -73,7 +74,8 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && hearDistance < hearRadius)
         {
             Debug.Log("I CAUGHT YOU");
-        }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
     }
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
